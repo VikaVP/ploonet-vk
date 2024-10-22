@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  font-family: "pretendard", sans-serif;
+  font-weight: 400;
+}
+
+.active-nav::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px; /* Circle diameter */
+  height: 8px; /* Circle diameter */
+  border-radius: 50%; /* Makes it a circle */
+  background: linear-gradient(45deg, #ff4e83, #ffbb54); /* Gradient color */
+}
+
+.jumbotron {
+  background-image: url("../../public/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gradient {
+  background-image: url("../../public/bubble.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gradient-border {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  left: -1.5px;
+  right: -1.5px;
+  bottom: -1.5px;
+  border-radius: 50%; /* Make it circular */
+  background: linear-gradient(180deg, #ff4e83, #ffbb54);
+  z-index: -1;
+}
+.gradient-border:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 2px;
+  right: -5px;
+  background: #141414;
+  z-index: 2;
+}
+
+.gradient-border:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 2px;
+  left: -5px;
+  background: #141414;
+  z-index: 2;
+}
+
+.gradient-separator {
+  height: 0.35px;
+  width: 80%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.bullet-header::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff4e83, #ffbb54);
+}
+
+.box-gradient {
+  background: linear-gradient(135deg, #ff4e83, #ffbb54);
+}
+
+.box-gradient-border {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+.box-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  left: -1.5px;
+  right: -1.5px;
+  bottom: -1.5px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ff4e83, #ffbb54);
+  z-index: -1;
+}
+
+@media (min-width: 900px) {
+  .box-gradient-border-medium {
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+  }
+  .box-gradient-border-medium::before {
+    content: "";
+    position: absolute;
+    top: -1.5px;
+    left: -1.5px;
+    right: -1.5px;
+    bottom: -1.5px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ff4e83, #ffbb54);
+    z-index: -1;
+  }
+}
