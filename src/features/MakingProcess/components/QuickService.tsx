@@ -54,7 +54,7 @@ const QuickService: React.FC = () => {
                         src={step.img as string}
                         alt={step.number}
                         className={cn(
-                          "drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-sm w-[30px] medium:w-[40px]",
+                          "drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-sm w-[26px] medium:w-[40px]",
                           index === serviceSteps.length - 1 &&
                             "hidden medium:block",
                           index === 2 && "medium:w-[56px]",
