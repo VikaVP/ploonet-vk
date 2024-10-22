@@ -21,7 +21,7 @@ export default function Offers() {
             key={i}
           >
             <div className="bg-[#141414] w-full h-full flex justify-center items-center flex-col rounded-full gap-2">
-              <h4 className="bg-gradient-to-r from-[#FF4E83] to-[#FFBB54] bg-clip-text text-transparent text-base medium:text-[32px] w-max font-bold w-[50%] medium:w-[70%] text-center leading-tight">
+              <h4 className="bg-gradient-to-r from-[#FF4E83] to-[#FFBB54] bg-clip-text text-transparent text-base medium:text-[32px] font-bold w-[50%] medium:w-[70%] text-center leading-tight">
                 {offer.name}
               </h4>
               <p className="bg-gradient-to-r from-[#FF4E83] to-[#FFBB54] bg-clip-text text-transparent text-2xl w-max font-medium opacity-[60%] hidden medium:block">
